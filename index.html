@@ -22,11 +22,12 @@
         .product-grid {
             display: flex;
             justify-content: space-between;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             gap: 20px;
+            overflow-x: auto;
         }
         .product {
-            width: calc(20% - 20px);
+            width: calc(100% / 15 - 20px);
             background-color: white;
             padding: 15px;
             border-radius: 8px;
