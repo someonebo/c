@@ -60,11 +60,20 @@
 </head>
     
 <body>
-    <div class="pagination">
+
+
+
+
+    <div class="container">
+        <div class="product-grid"> 
+            <div class="pagination">
     <button onclick="prevPage()">Previous</button>
     <span id="page-info">Page 1</span>
     <button onclick="nextPage()">Next</button>
-        <script>
+</div>
+
+            <script>
+
     let currentPage = 1;
     const productsPerPage = 20; // Adjust as needed
     const totalProducts = 800; 
@@ -92,10 +101,8 @@
     updatePage(); // Initialize
 </script>
 
-</div>
-
-    <div class="container">
-        <div class="product-grid">            <div class="product">
+            
+            <div class="product">
                 <h3> လွှမ်းပိုင်</h3>
                 <a href=" လွှမ်းပိုင်.html"><button>[GO]</button></a>
             </div>
