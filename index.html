@@ -27,7 +27,7 @@
             overflow-x: auto;
         }
         .product {
-            width: calc(100% / 15 - 20px);
+            width: calc(100% / 10 - 20px);
             background-color: white;
             padding: 15px;
             border-radius: 8px;
@@ -58,7 +58,42 @@
         }
     </style>
 </head>
+    
 <body>
+    <div class="pagination">
+    <button onclick="prevPage()">Previous</button>
+    <span id="page-info">Page 1</span>
+    <button onclick="nextPage()">Next</button>
+        <script>
+    let currentPage = 1;
+    const productsPerPage = 20; // Adjust as needed
+    const totalProducts = 800; 
+    const totalPages = Math.ceil(totalProducts / productsPerPage);
+
+    function updatePage() {
+        document.getElementById("page-info").innerText = `Page ${currentPage} of ${totalPages}`;
+        // Fetch and display only the products for the current page
+    }
+
+    function nextPage() {
+        if (currentPage < totalPages) {
+            currentPage++;
+            updatePage();
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            updatePage();
+        }
+    }
+
+    updatePage(); // Initialize
+</script>
+
+</div>
+
     <div class="container">
         <div class="product-grid">            <div class="product">
                 <h3> လွှမ်းပိုင်</h3>
