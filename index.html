@@ -78,7 +78,23 @@
 
 
 
-    <div class="container">
+    <div class="container"><br><br>
+                       <center> <input type="text" id="searchBar" placeholder="Search products..." onkeyup="searchProducts()"> </center>
+                <script>
+    function searchProducts() {
+        let input = document.getElementById("searchBar").value.toLowerCase(); // Get search input
+        let products = document.querySelectorAll(".product"); // Select all products
+        
+        products.forEach(product => {
+            let title = product.querySelector("h3").textContent.toLowerCase(); // Get product name
+            if (title.includes(input)) {
+                product.style.display = "block"; // Show product if matched
+            } else {
+                product.style.display = "none"; // Hide product if not matched
+            }
+        });
+    }
+</script>
         <div class="product-grid"> 
           
             
